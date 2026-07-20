@@ -1,32 +1,32 @@
 === INSTALLATION GUIDE FOR NEVER MULTITOOL ===
 EDUCATIONAL PURPOSES ONLY!
 
-This tool requires Python 3, Nmap and the pyfiglet module.
+This tool requires Python 3, Nmap, hping3 and the pyfiglet module.
 Install them according to your distribution:
 
 --- Debian / Ubuntu / Kali Linux ---
 sudo apt update
-sudo apt install python3 nmap
+sudo apt install python3 nmap hping3
 pip install pyfiglet
 
 --- Fedora ---
-sudo dnf install python3 nmap
+sudo dnf install python3 nmap hping3
 pip install pyfiglet
 
 --- Arch Linux ---
-sudo pacman -S python nmap
+sudo pacman -S python nmap hping
 pip install pyfiglet
 
 --- openSUSE ---
-sudo zypper install python3 nmap
+sudo zypper install python3 nmap hping
 pip install pyfiglet
 
 --- Void Linux ---
-sudo xbps-install -S python3 nmap
+sudo xbps-install -S python3 nmap hping
 pip install pyfiglet
 
 --- Gentoo ---
-sudo emerge --ask dev-lang/python net-analyzer/nmap
+sudo emerge --ask dev-lang/python net-analyzer/nmap net-analyzer/hping
 pip install pyfiglet
 
 After installation, run the tool with:

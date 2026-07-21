@@ -1,5 +1,6 @@
 import pyfiglet
 import os
+os.system("aplay ~/Downloads/boing_x.wav")
 text = pyfiglet.figlet_format("NEVER MULTITOOL")
 print(text)
 print("EDUCATIONAL PURPOSES ONLYY!!!")

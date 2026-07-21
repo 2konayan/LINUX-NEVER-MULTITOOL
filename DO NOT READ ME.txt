@@ -30,4 +30,4 @@ sudo emerge --ask dev-lang/python net-analyzer/nmap net-analyzer/hping net-analy
 pip install pyfiglet
 
 After installation, run the tool with:
-python3 never_multitool.py
+python3 NEVER.py

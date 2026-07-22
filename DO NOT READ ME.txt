@@ -1,32 +1,32 @@
 === INSTALLATION GUIDE FOR NEVER MULTITOOL ===
 EDUCATIONAL PURPOSES ONLY!
 
-This tool requires Python 3, Nmap, hping3, macchanger, alsa-utils and the pyfiglet module.
+This tool requires Python 3, Nmap, hping3, macchanger, alsa-utils, dnsutils and the pyfiglet module.
 Install them according to your distribution:
 
 --- Debian / Ubuntu / Kali Linux ---
 sudo apt update
-sudo apt install python3 nmap hping3 macchanger alsa-utils
+sudo apt install python3 nmap hping3 macchanger alsa-utils dnsutils
 pip install pyfiglet
 
 --- Fedora ---
-sudo dnf install python3 nmap hping3 macchanger alsa-utils
+sudo dnf install python3 nmap hping3 macchanger alsa-utils bind-utils
 pip install pyfiglet
 
 --- Arch Linux ---
-sudo pacman -S python nmap hping macchanger alsa-utils
+sudo pacman -S python nmap hping macchanger alsa-utils bind-tools
 pip install pyfiglet
 
 --- openSUSE ---
-sudo zypper install python3 nmap hping macchanger alsa-utils
+sudo zypper install python3 nmap hping macchanger alsa-utils bind-utils
 pip install pyfiglet
 
 --- Void Linux ---
-sudo xbps-install -S python3 nmap hping macchanger alsa-utils
+sudo xbps-install -S python3 nmap hping macchanger alsa-utils bind-utils
 pip install pyfiglet
 
 --- Gentoo ---
-sudo emerge --ask dev-lang/python net-analyzer/nmap net-analyzer/hping net-analyzer/macchanger media-libs/alsa-lib
+sudo emerge --ask dev-lang/python net-analyzer/nmap net-analyzer/hping net-analyzer/macchanger media-libs/alsa-lib net-dns/bind-tools
 pip install pyfiglet
 
 After installation, run the tool with:

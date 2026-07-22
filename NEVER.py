@@ -9,7 +9,8 @@ option = input("""1.NMAP PORT SCAN
          2.PINGER
          3.SYN DOS
          4.MAC SPOOFING
-         5.EXIT NEVER""")
+         5.WHOIS INFO
+         6.EXIT NEVER""")
 if option == "1":
     target_ip = input("What is the target's ip ")
     os.system("sudo nmap " + target_ip)
@@ -25,4 +26,7 @@ elif option == "4":
     os.system("sudo macchanger -r " + option)
     os.system("sudo ifconfig " + option + " up")
 elif option == "5":
+    target_ip = input("What is the target's ip? ")
+    os.system("whois " + target_ip)
+elif option == "6":
     exit()

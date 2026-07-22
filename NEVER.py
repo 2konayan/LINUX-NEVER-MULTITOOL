@@ -1,8 +1,15 @@
 import pyfiglet
 import os
-os.system("aplay ~/Downloads/boing_x.wav")
+from colorama import init, Fore, Style
+
+init(autoreset=True)
+
+os.system("aplay ~/Downloads/boing_x.wav 2>/dev/null")
+
 text = pyfiglet.figlet_format("NEVER MULTITOOL")
-print(text)
+print(Fore.RED + text)
+print(Style.RESET_ALL)
+
 print("EDUCATIONAL PURPOSES ONLYY!!!")
 print("SYSADMIN TOOL")
 option = input("""1.NMAP PORT SCAN
@@ -10,7 +17,7 @@ option = input("""1.NMAP PORT SCAN
          3.SYN DOS
          4.MAC SPOOFING
          5.WHOIS INFO
-         6.DNS LOOKUP(SITE INFO)
+         6.NSLOOKUP
          7.EXIT NEVER""")
 if option == "1":
     target_ip = input("What is the target's ip ")
@@ -30,7 +37,7 @@ elif option == "5":
     target_ip = input("What is the target's ip? ")
     os.system("whois " + target_ip)
 elif option == "6":
-    target_site = input("What is the target's URL not full just the site.com? ")
-    os.system("nslookup " + target_site)
+    target_ip = input("What is the domain you want to lookup? ")
+    os.system("nslookup " + target_ip)
 elif option == "7":
     exit()

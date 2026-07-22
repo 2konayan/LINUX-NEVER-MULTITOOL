@@ -10,7 +10,8 @@ option = input("""1.NMAP PORT SCAN
          3.SYN DOS
          4.MAC SPOOFING
          5.WHOIS INFO
-         6.EXIT NEVER""")
+         6.DNS LOOKUP(SITE INFO)
+         7.EXIT NEVER""")
 if option == "1":
     target_ip = input("What is the target's ip ")
     os.system("sudo nmap " + target_ip)
@@ -29,4 +30,7 @@ elif option == "5":
     target_ip = input("What is the target's ip? ")
     os.system("whois " + target_ip)
 elif option == "6":
+    target_site = input("What is the target's URL not full just the site.com? ")
+    os.system("nslookup " + target_site)
+elif option == "7":
     exit()

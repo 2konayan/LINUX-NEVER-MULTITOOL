@@ -19,12 +19,32 @@ quotes = [
     "Knowledge is free. We are anonymous. We are Legion.",
     "Expect the unexpected.",
     "There is no patch for human stupidity.",
-    "Hackers rule the world, be a part of them.",
+    "Muffin and Yuka rule the world.",
     "Keep calm and hack ethically."
 ]
 
 print(Fore.YELLOW + random.choice(quotes))
 print(Style.RESET_ALL)
+
+feline_surprise = random.randint(1, 4)
+if feline_surprise != 4:
+    chosen_cat = random.choice(["muffin", "yuka"])
+    if chosen_cat == "muffin":
+        print(Fore.CYAN + r"""
+    /\_/\\
+   ( o.o )
+    > ^ <
+        """)
+        print("Muffin says: 'Stop hacking and pet me!'")
+        print(Style.RESET_ALL)
+    else:
+        print(Fore.MAGENTA + r"""
+    /\_/\\
+   ( -.- )
+    > ^ <
+        """)
+        print("Yuka says: 'I am the queen of this tool.'")
+        print(Style.RESET_ALL)
 
 option = input("""1.NMAP PORT SCAN
          2.PINGER

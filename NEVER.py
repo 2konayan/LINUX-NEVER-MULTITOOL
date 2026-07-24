@@ -54,8 +54,10 @@ while True:
          6.NSLOOKUP
          7.NETCAT RV SHELL
          8.SHUTDOWN SYS
-         9.EXIT NEVER
-         """)
+         9.SUBLIST3R
+         10.CHECK IP
+         11.SHRED FILE
+         12.EXIT NEVER """)
 
     if option == "1":
         target_ip = input("What is the target's ip ")
@@ -88,4 +90,12 @@ while True:
     elif option == "8":
         os.system("shutdown -h now")
     elif option == "9":
+        target_url = input("What is the target's url? ")
+        os.system("sublist3r -d  " + target_url)
+    elif option == "10":
+        os.system("curl ifconfig.me")
+    elif option == "11":
+        path = input("What is the full path of the file u wanna shred? ")
+        os.system("sudo shred -u " + path)
+    elif option == "12":
         exit()
